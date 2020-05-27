@@ -1,5 +1,4 @@
 import { Snackbar } from 'buefy/dist/components/snackbar'
-import { Toast } from 'buefy/dist/components/toast'
 import { size, head, toUpper } from 'lodash-es'
 import * as mutations from './mutations.type'
 
@@ -35,41 +34,6 @@ const cardsActionsPlugin = store => {
           }
         })
       }
-    }
-  )
-
-  // roulette mode
-  store.watch(
-    ({ level, isRouletteMode }, { foundCount }) => ({ level, foundCount, isRouletteMode }),
-    ({ level, foundCount, isRouletteMode }) => {
-      // skip
-      if (foundCount <= 1 || !isRouletteMode || level === foundCount) {
-        return
-      }
-
-      if ((foundCount % (level / 3)) === 0) {
-        store.commit(mutations.setIsLoading, true)
-
-        setTimeout(() => {
-          store.commit(mutations.setShuffleCount, Math.random() * 100)
-          store.commit(mutations.setIsLoading, false)
-        }, 500)
-      }
-    }
-  )
-
-  // watch Easy Mode
-  store.watch(
-    ({ isEasyMode }) => isEasyMode,
-    val => {
-      val
-        ? Toast.open({
-          type: 'is-warning',
-          message: 'Easy Mode is On. Your score will be lower than normal.'
-        })
-        : Toast.open({
-          message: 'Easy Mode is Off, Your score returns to normal.'
-        })
     }
   )
 
