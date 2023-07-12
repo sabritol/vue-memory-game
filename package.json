@@ -24,7 +24,7 @@
     "@vue/cli-plugin-babel": "^4.2.3",
     "@vue/cli-plugin-eslint": "^4.2.3",
     "@vue/cli-plugin-pwa": "^4.2.3",
-    "@vue/cli-plugin-unit-jest": "^4.2.3",
+    "@vue/cli-plugin-unit-jest": "^5.0.8",
     "@vue/cli-service": "^4.2.3",
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/test-utils": "1.0.0-beta.32",
@@ -37,7 +37,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^9.0.0",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-buefy": "^0.3.7",
     "vue-template-compiler": "^2.6.11"
